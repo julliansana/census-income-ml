@@ -19,7 +19,7 @@ def convert_value_set_to_number(column):
 # One hot encoding
 def one_hot_encoding(dataframe, column_name:str):
     encoded_df = pd.get_dummies(data=dataframe, columns=[column_name], prefix=column_name)
-    print(encoded_df.columns)
+    # print(encoded_df.columns)
     return pd.concat([dataframe, encoded_df], axis=1).drop(column_name, axis=1)
 
 def preprocess_input(df):
